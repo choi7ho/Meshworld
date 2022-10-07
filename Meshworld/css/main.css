@@ -1,0 +1,623 @@
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top_banner {
+    padding: 40px 0;
+    background: #f7f7f7;
+}
+
+.top_banner .inner {
+    position: relative;
+}
+
+.top_banner i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+}
+
+.top_banner h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.05em;
+}
+
+.top_banner a {
+    padding: 5px 20px;
+    background: #333;
+    color: #fff;
+    margin: 0 0 0 15px;
+}
+
+header .h1 {
+    font-size: 0;
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+}
+
+header .inner ul {
+    display: flex;
+    gap: 40px;
+    flex: 1;
+    overflow: hidden;
+}
+
+header .inner ul>li {
+    position: relative;
+}
+
+header .inner ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: -20px;
+    width: 2px;
+    height: 12px;
+    background: #666;
+}
+
+.test_hover01 .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.test_hover01 .inner figure {
+    flex: 1;
+    overflow: hidden;
+}
+
+.test_hover01 .inner .box {
+    flex: 1;
+    overflow: hidden;
+}
+
+.test_hover01 .inner figure img {
+    transition: 0.5s;
+}
+
+.test_hover01 .inner figure:hover img {
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+
+.test_hover02 .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.test_hover02 .inner figure {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.test_hover02 .inner .cart {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+.test_hover02 .inner figure:hover .cart {
+    bottom: 0;
+
+}
+
+.test_hover03 {
+    padding: 100px 0;
+}
+
+.test_hover03 .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.test_hover03 figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.test_hover03 figure .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+}
+
+.test_hover03 figure .txt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -400px;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.test_hover03 figure:hover .txt::before {
+    left: 0;
+}
+
+.test_hover03 figure .txt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 400px;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: 0.5s 0.5s;
+}
+
+.test_hover03 figure:hover .txt::after {
+    left: 0;
+}
+
+.test_hover03 figure span {
+    opacity: 0;
+    transition: 0.5s 1s;
+}
+
+.test_hover03 figure:hover span {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_visual .slick-track {
+    transition-duration: 5ms;
+}
+
+.main_visual .main_slide figure {
+    position: relative;
+    height: 700px;
+}
+
+.main_visual .main_slide figure h2 {
+    opacity: 0;
+    transform: translateY(100px);
+    /* transition: 0.5s; */
+    /* 백보장하기 위해 on 에 붙임 */
+}
+
+.main_visual .main_slide figure.on h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
+}
+
+.main_visual .main_slide figure p {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.main_visual .main_slide figure.on p {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s 0.5s;
+}
+
+.main_visual .main_slide figure a {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.main_visual .main_slide figure.on a {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s 1s;
+}
+
+.main_visual .main_slide .item01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .item02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .item03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    font-size: 0;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.main_visual .main_slide .slick-prev {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    margin: 0 0 0 -700px;
+}
+
+.main_visual .main_slide .slick-next {
+    transform: translate(-50%, -50%) rotate(135deg);
+    margin: 0 0 0 700px;
+}
+
+.main_visual .main_slide .slick-dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_visual .main_slide .slick-dots li {
+    display: inline-block;
+    font-size: 0;
+    padding: 10px 0;
+}
+
+.main_visual .main_slide .slick-dots li button {
+    position: relative;
+    width: 60px;
+    height: 4px;
+    background: #333;
+    border: none;
+    margin: 0 4px;
+}
+
+.main_visual .main_slide .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+}
+
+.main_visual .main_slide .box h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 3px #000;
+}
+
+.main_visual .main_slide .box p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 3px #000;
+}
+
+.main_visual .main_slide .box a {
+    display: inline-block;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+    padding: 5px 20px 7px 20px;
+
+}
+
+.main_visual .main_slide .item03 {
+    text-align: right;
+}
+
+.main_visual .main_slide .slick-dots li button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #f00;
+}
+
+.main_visual .main_slide .slick-dots li.slick-active button::after {
+    width: 100%;
+    transition: 2s;
+}
+
+.main_visual .main_slide .slick-dots li.slick-active button {
+    /* background: #f00; */
+}
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .num {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin: 0 0 0 600px;
+    transform: translateX(-100%);
+    font-size: 100px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 9px #000;
+}
+
+.main_visual .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    display: flex;
+    background: tomato;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.main_visual .btn li {
+    flex: 1;
+}
+
+.main_visual .btn li.on {
+    background: #f00;
+}
+
+.main_visual .btn li~li {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* *메인 이벤트 */
+.main_event {
+    padding: 100px 0;
+    /* 섹션은 패팅, 마진 아님 */
+    text-align: center;
+}
+
+.main_event h2 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1em;
+    /* * 띄엄띄엄 (영어만 한글은 안이쁨) */
+    margin: 0 0 15px 0;
+}
+
+.main_event p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+}
+
+.main_event .inner {
+    display: flex;
+    gap: 30px;
+}
+
+/* * 스트롱과 에이는 인라인이라 옆으로 정렬됨
+/* * 인라인은 좌우 패딩, 마진만 먹음 */
+
+.main_event .inner figure {
+    flex: 1;
+}
+
+.main_event .inner figure .box {
+    overflow: hidden;
+    /* 틀안에서 커짐 */
+}
+
+.main_event .inner figure img {
+    transition: 0.5s;
+}
+
+.main_event .inner figure:hover img {
+    transform: scale(1.2);
+}
+
+.main_event .inner figure strong {
+    display: block;
+    /* * 박스가 되라 */
+    margin: 0 0 30px 0;
+}
+
+.main_event .inner figure a {
+    display: inline-block;
+    padding: 5px 20px 7px 20px;
+    background: #333;
+    color: #fff;
+}
+
+.fixed_bg {
+    padding: 100px 0;
+    background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+    /* background-attachment: fixed; */
+    color: #fff;
+    text-align: center;
+    filter: grayscale(1)
+        /* /* 이미지 css에서 흑백 다른 처리 가능 함, 같은 박스 안에서 상속됨 */
+}
+
+.fixed_bg h2 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1em;
+    /* * 띄엄띄엄 (영어만 한글은 안이쁨) */
+    margin: 0 0 15px 0;
+}
+
+.fixed_bg p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+}
+
+.fixed_bg i {
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+    background: #f00;
+    transform: translateY(2px);
+}
+
+.main_movie {
+    padding: 100px 0;
+}
+
+.main_movie video {
+    max-width: 100%;
+}
+
+.main_movie .inner {
+    display: flex;
+    gap: 100px;
+}
+
+.main_movie .inner>* {
+    flex: 1;
+}
+
+.main_movie .des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_movie h2 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    /* * 띄엄띄엄 (영어만 한글은 안이쁨) */
+    margin: 0 0 15px 0;
+}
+
+.main_movie p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+    line-height: 1.45;
+}
+
+.main_movie i {
+    padding: 15px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    background: #333;
+    transform: translateY(2px);
+    color: #ffF;
+}
+
+.main_ytp {
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+    filter: grayscale(1);
+}
+
+.main_ytp h2 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1em;
+    margin: 0 0 15px 0;
+}
+
+.main_ytp p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+}
+
+.main_ytp i {
+    padding: 15px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    background: #333;
+    transform: translateY(2px);
+    color: #ffF;
+}
+
+.main_product {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.main_product h2 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1em;
+    margin: 0 0 15px 0;
+}
+
+.main_product p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+}
+
+.main_product figure {
+    padding: 0 15px;
+}
+
+.main_product figure img {
+    padding: 0 0 30px 0;
+}
+
+.main_product figure strong {
+    font-size: 12px;
+}
+
+.main_product .inner {
+    position: relative;
+}
+
+.main_product i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.main_product i:first-child {
+    margin: 0 0 0 -700px;
+}
+
+.main_product i:last-child {
+    margin: 0 0 0 700px;
+}
+
+.main_product .product_slide {
+    margin: 0 0 30px 0;
+}
+
+.main_product .dots {
+    display: flex;
+    justify-content: center;
+    font-size: 0;
+}
+
+.main_product .dots li {
+    position: relative;
+    width: 30px;
+    height: 20px;
+}
+
+.main_product .dots li::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 30%;
+    background: #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.main_product .dots li.on::after {
+    height: 100%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
