@@ -1,0 +1,161 @@
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+.mopen {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.inner {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.inner>li {
+    flex: 1;
+    text-align: center;
+    line-height: 80px;
+
+}
+
+.inner>li~li {
+    border-left: 1px solid #ddd;
+}
+
+@media (max-width:768px) {
+    header {
+        position: relative;
+        z-index: 999;
+        text-align: left;
+        padding: 50px 15px;
+    }
+
+    .mopen {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 15px;
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    .mopen::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+    }
+
+    .mopen.on::before {
+        display: none;
+    }
+
+    .mopen::after {
+        content: "";
+        position: absolute;
+        bottom: 7px;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+    }
+
+    .mopen.on::after {
+        display: none;
+    }
+
+
+    .mopen span::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 0.5px);
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+        transition: 0.2s;
+    }
+
+    .mopen.on span::before {
+        transform: rotate(45deg);
+    }
+
+    .mopen span::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 0.5px);
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: #333;
+        transition: 0.2s;
+    }
+
+    .mopen.on span::after {
+        transform: rotate(-45deg);
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #fff;
+        border-top: 0 solid #ddd;
+        border-bottom: 0 solid #ddd;
+        width: calc(100% - 70px);
+        height: 100vh;
+        padding: 120px 0 0 0;
+        border-right: 1px solid #ddd;
+        transition: 0.5s;
+    }
+
+    /* 70px 유지하면서 쪼그라 듬 */
+    /* pc 버전은 높이 안줌, 반응형일 때는 높이 줌 */
+
+    nav.on {
+        left: 0;
+    }
+
+    /* 띄우면 자식, 붙이면 같은 라인 */
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 0 auto;
+
+    }
+
+    .inner>li {
+        flex: 1;
+        text-align: center;
+        line-height: 80px;
+
+    }
+
+    .inner>li~li {
+        border-left: 0 solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+
+}
+
+/* 768px 이하 부터는 다른 css를 적용하라 */
+/* 새롭게 안쓴 옵션은 위에껄 그대로 상속받는다 */
